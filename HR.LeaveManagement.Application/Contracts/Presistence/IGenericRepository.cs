@@ -4,8 +4,8 @@ namespace HR.LeaveManagement.Application.Contracts.Presistence;
 public interface IGenericRepository<T> where T : BaseEntity
 {
     Task<T?> GetByIdAsync(int id);
-    Task<IEnumerable<T>> GetAsync();
-    Task<T> CreateAsync(T entity);
-    Task<T> UpdateAsync(T entity);
-    void Delete(T entity);
+    Task<IReadOnlyList<T>> GetAsync();
+    Task CreateAsync(T entity);
+    Task UpdateAsync(T entity);
+    Task Delete(T entity);
 }
