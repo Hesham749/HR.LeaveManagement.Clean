@@ -11,4 +11,9 @@ public class LeaveTypeRepository(HrDbContext context)
     {
         return !await _context.leaveTypes.AnyAsync(x => x.Name!.Equals(name));
     }
+
+    public async Task<bool> IsLeaveTypeExists(int id)
+    {
+        return await _context.leaveTypes.AnyAsync(x => x.Id == id);
+    }
 }

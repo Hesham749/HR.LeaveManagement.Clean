@@ -1,6 +1,6 @@
 ﻿namespace HR.LeaveManagement.Application.Contracts.Logging;
 public interface IAppLogger<T>
 {
-    void LogInFormation(string message, params object[] args);
-    void LogWarning(string message, params object[] args);
+    void LogInFormation(string message);
+    void LogWarning(string message);
 }

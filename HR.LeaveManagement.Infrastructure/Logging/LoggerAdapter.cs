@@ -6,13 +6,13 @@ public class LoggerAdapter<T>(ILoggerFactory loggerFactory) : IAppLogger<T>
 {
     private readonly ILogger<T> _logger = loggerFactory.CreateLogger<T>();
 
-    public void LogInFormation(string message, params object[] args)
+    public void LogInFormation(string message)
     {
-        _logger.LogInformation(message, args);
+        _logger.LogInformation(message);
     }
 
-    public void LogWarning(string message, params object[] args)
+    public void LogWarning(string message)
     {
-        _logger.LogWarning(message, args);
+        _logger.LogWarning(message);
     }
 }
